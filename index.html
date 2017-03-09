@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="en" ng-app="ShoppingListApp">
+
+  <head>
+    <title>Shopping Lists</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+  </head>
+
+<body>
+   <!--<div class="container">
+     <h1>Lunch Items List</h1>
+     <hr>
+        <div ng-controller="Controller">
+            <div class="form-group">
+                <input id="lunch-menu" type="text"
+                placeholder="list comma separated dishes you  had for lunch"
+                class="form-control"
+                ng-model = "food">
+            </div>
+            <div>
+                <p class="text-muted"> We do NOT consider and empty item, i.e., , , as an item towards to the count.</p>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" ng-click="checkItem()">Check If Too Much</button>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div
+                    class="form-group message"
+                    style="color:{{colour}}; border: 1px solid {{colour}}"
+                    align="center">
+                        <span>{{value}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>-->
+
+   <!--Assignment -2-->
+     <div class= "container fluid">
+       <h2>Check-Off Items from Shopping List</h2>
+
+        <div class = "col-xs-6" ng-controller = "ShopBuy as buy">
+          <h3> Items to Buy </h3>
+             <ol>
+                <li ng-repeat = "item in buy.items"> Buy {{item.quantity}} of {{item.name}}
+                    <button ng-click="buy.removeFrmList($index);"><span class="glyphicon glyphicon-ok"></span>BUY</button>
+                </li>
+             </ol>
+             <div ng-if="!buy.items.length">Everything is Bought</div>
+        </div>
+
+     <div class="col-xs-6" ng-controller ="ShopBought as bought">
+         <h3>Items Bought </h3>
+         <ol>
+            <li ng-repeat = "item in bought.items"> Bought {{item.quantity}} of {{item.name}}
+            </li>
+         </ol>
+         <div ng-if="!bought.items.length">Nothing Bought</div>
+       </div>
+
+
+     </div> <!--Container-fluid-->
+</body>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</html>
