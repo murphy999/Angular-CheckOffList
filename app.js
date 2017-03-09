@@ -126,11 +126,11 @@ function ShoppingListService(maxItems) {
     },
      {
       name : "Tea",
-      quantity : "3 packets"
+      quantity : "2 packets"
     },
      {
       name : "Cookie",
-      quantity : "10 packets"
+      quantity : "7 packets"
     }
   ];
 
