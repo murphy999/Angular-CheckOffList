@@ -124,11 +124,11 @@ function ShoppingListService(maxItems) {
       name : "Fruits",
       quantity : "1 dozen"
     },
-     {
+    {
       name : "Tea",
       quantity : "2 packets"
     },
-     {
+    {
       name : "Cookie",
       quantity : "7 packets"
     }
