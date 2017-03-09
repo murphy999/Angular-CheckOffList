@@ -1,2 +1,4 @@
 # Angular-CheckOffList
-angularjs practice
+
+
+ https://murphy999.github.io/Angular-CheckOffList/  -review
