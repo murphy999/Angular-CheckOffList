@@ -86,22 +86,20 @@ function Config(ShoppingListServiceProvider) {
 }
 
 
-ShopBuy.$inject = ['$scope','ShoppingListService'];
-function ShopBuy($scope,ShoppingListService) {
+ShopBuy.$inject = ['ShoppingListService'];
+function ShopBuy(ShoppingListService) {
   var buy = this;
-  $scope.buy = buy;
-  $scope.buy.items = ShoppingListService.getItems();
+  buy.items = ShoppingListService.getItems();
 
-  $scope.buy.removeFrmList = function (itemIndex) {
+  buy.removeFrmList = function (itemIndex) {
     ShoppingListService.removeItem(itemIndex);
   };
 }
 
-ShopBought.$inject = ['$scope','ShoppingListService'];
-function ShopBought($scope,ShoppingListService) {
+ShopBought.$inject = ['ShoppingListService'];
+function ShopBought(ShoppingListService) {
  var bought = this;
- $scope.bought = bought;
- $scope.bought.items = ShoppingListService.addItem();
+ bought.items = ShoppingListService.addItem();
  }
 
 // If not specified, maxItems assumed unlimited
@@ -125,14 +123,6 @@ function ShoppingListService(maxItems) {
     {
       name : "Fruits",
       quantity : "1 dozen"
-    },
-    {
-      name : "Tea",
-      quantity : "6 packets"
-    },
-    {
-      name : "Cookie",
-      quantity : "8 packets"
     }
   ];
 
